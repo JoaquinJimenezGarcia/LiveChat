@@ -1,3 +1,4 @@
+// Indicates the IP and the default port for the conexion
 var socket = io.connect('http://192.168.1.139:6677', {'forceNew':true});
 
 socket.on('messages', function(data){

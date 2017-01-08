@@ -9,12 +9,14 @@ app.get('/hola-mundo', function(req, res){
     res.status(200).send('Hola mundo desde una ruta');
 });
 
+// Default message for the first loggin
 var messages = [{
     id: 1,
     text: 'Bienvenidos al chat privado de Cthulhu',
     nickname: 'Bot - Cthulhu '
 }];
 
+// Tells who is connected with its own IP
 io.on('connection', function(socket){
     console.log('El nodo con IP: ' + socket.handshake.address + ' se ha conectado');
     socket.emit('messages', messages)
