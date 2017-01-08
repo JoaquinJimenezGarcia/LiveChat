@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-widtch, initial-scale=1.0" />
+    <title> Chat en vivo </title>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+
+</head>
+<body>
+    <center><h1> Chat en vivo </h1></center>
+    <div id="messages"></div>
+
+    <form onsubmit="return addMessage(this);">
+        <label for="nickname">Nickname</label>
+        <input id="nickname" type="text" placeholder="Nick" required />
+        <label for="text">Mensaje</label>
+        <textarea id="text" placeholder="Escriba aquí su mensaje"></textarea>
+        <input type="submit" value="Enviar" />
+    </form>
+</body>
+</html>
